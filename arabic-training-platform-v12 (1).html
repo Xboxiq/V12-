@@ -2421,6 +2421,554 @@
     }
     #mobile-menu-btn svg { width: 18px; height: 18px; }
 
+    /* ============================================================
+       MODULE: ADVANCED PROGRAMMING (The Logic Layer)
+    ============================================================ */
+    .prog-challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .prog-challenge-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .prog-challenge-card::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; left: 0;
+      height: 3px;
+    }
+
+    .prog-challenge-card.arch::before { background: linear-gradient(90deg, #8B5CF6, #6366F1); }
+    .prog-challenge-card.clean::before { background: linear-gradient(90deg, var(--accent), #0EA5E9); }
+    .prog-challenge-card.scale::before { background: linear-gradient(90deg, #F97316, #EAB308); }
+    .prog-challenge-card.debt::before { background: linear-gradient(90deg, #EF4444, #EC4899); }
+
+    .prog-challenge-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .prog-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .prog-card-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .prog-card-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .prog-card-subtitle {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .prog-card-body {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .prog-psych-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: rgba(139, 92, 246, 0.1);
+      color: #8B5CF6;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    .prog-flow-meter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .prog-flow-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .prog-flow-bar {
+      flex: 1;
+      height: 6px;
+      background: var(--surface-3);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .prog-flow-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #8B5CF6, var(--accent));
+      transition: width 0.6s ease;
+    }
+
+    .prog-code-block {
+      background: #0D1117;
+      border: 1px solid rgba(102, 252, 241, 0.12);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-top: 12px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      line-height: 1.8;
+      color: #E6EDF3;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .prog-code-block .kw { color: #FF7B72; }
+    .prog-code-block .fn { color: #D2A8FF; }
+    .prog-code-block .str { color: #A5D6FF; }
+    .prog-code-block .cm { color: #8B949E; font-style: italic; }
+    .prog-code-block .num { color: #79C0FF; }
+
+    .prog-principle-box {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-top: 12px;
+    }
+
+    .prog-principle-label {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #8B5CF6;
+      margin-bottom: 6px;
+    }
+
+    .prog-principle-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       MODULE: ACCOUNTING & CASHIER (The Precision Layer)
+    ============================================================ */
+    .acc-dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .acc-stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .acc-stat-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .acc-stat-num {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .acc-stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .acc-scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .acc-scenario-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .acc-scenario-card::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; left: 0;
+      height: 3px;
+    }
+
+    .acc-scenario-card.precision::before { background: linear-gradient(90deg, #22C55E, #0EA5E9); }
+    .acc-scenario-card.pressure::before { background: linear-gradient(90deg, #EF4444, #F97316); }
+    .acc-scenario-card.fraud::before { background: linear-gradient(90deg, #EAB308, #F97316); }
+    .acc-scenario-card.reconcile::before { background: linear-gradient(90deg, #8B5CF6, #EC4899); }
+
+    .acc-scenario-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .acc-scenario-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .acc-scenario-icon {
+      width: 42px; height: 42px;
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .acc-scenario-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .acc-scenario-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .acc-psych-insight {
+      background: rgba(234, 179, 8, 0.06);
+      border: 1px solid rgba(234, 179, 8, 0.15);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .acc-psych-insight strong {
+      color: #EAB308;
+    }
+
+    .acc-calculator-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .acc-calc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .acc-calc-input {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .acc-calc-input label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .acc-calc-input input {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 12px;
+      outline: none;
+      transition: var(--transition);
+      text-align: center;
+      direction: ltr;
+    }
+
+    .acc-calc-input input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-dim);
+    }
+
+    .acc-pressure-gauge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .acc-pressure-emoji { font-size: 20px; }
+
+    .acc-pressure-bar {
+      flex: 1;
+      height: 8px;
+      background: var(--surface-3);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .acc-pressure-fill {
+      height: 100%;
+      border-radius: 99px;
+      transition: width 0.5s ease;
+    }
+
+    .acc-pressure-low { background: linear-gradient(90deg, #22C55E, #0EA5E9); }
+    .acc-pressure-med { background: linear-gradient(90deg, #EAB308, #F97316); }
+    .acc-pressure-high { background: linear-gradient(90deg, #EF4444, #EC4899); }
+
+    /* ============================================================
+       MODULE: FIELD SALES ENHANCEMENT (Persuasion + Body Language)
+    ============================================================ */
+    .body-lang-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .body-lang-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .body-lang-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .body-lang-emoji {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .body-lang-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .body-lang-desc {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .body-lang-signal {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      justify-content: center;
+    }
+
+    .body-lang-signal.positive { color: #22C55E; }
+    .body-lang-signal.negative { color: #EF4444; }
+    .body-lang-signal.neutral { color: #EAB308; }
+
+    .persuasion-principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .persuasion-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .persuasion-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0; left: 0;
+      height: 3px;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .persuasion-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .persuasion-card:hover::after { opacity: 1; }
+
+    .persuasion-card.p1::after { background: linear-gradient(90deg, var(--accent), #0EA5E9); }
+    .persuasion-card.p2::after { background: linear-gradient(90deg, #EF4444, #F97316); }
+    .persuasion-card.p3::after { background: linear-gradient(90deg, #8B5CF6, #6366F1); }
+    .persuasion-card.p4::after { background: linear-gradient(90deg, #EAB308, #F97316); }
+    .persuasion-card.p5::after { background: linear-gradient(90deg, #22C55E, #0EA5E9); }
+    .persuasion-card.p6::after { background: linear-gradient(90deg, #EC4899, #8B5CF6); }
+
+    .persuasion-num {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .persuasion-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .persuasion-arabic {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .persuasion-example {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      padding: 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      border-right: 3px solid var(--accent);
+    }
+
+    /* ============================================================
+       SHARED: Section dividers & Module headers for new modules
+    ============================================================ */
+    .v12-module-banner {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface-3) 100%);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-xl);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .v12-module-banner::after {
+      content: '';
+      position: absolute;
+      right: -40px; top: -40px;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .v12-module-banner-icon {
+      width: 56px; height: 56px;
+      border-radius: var(--radius-md);
+      background: var(--accent-dim);
+      border: 1px solid var(--border-hover);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .v12-module-banner-text h2 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .v12-module-banner-text p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .prog-challenge-grid,
+      .acc-scenario-grid,
+      .body-lang-grid,
+      .persuasion-principle-grid { grid-template-columns: 1fr; }
+      .acc-dashboard-grid,
+      .acc-calc-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
   </style>
 </head>
 <body>
@@ -2530,6 +3078,40 @@
         </svg>
         <span class="nav-label">خدمة العملاء المتميزة</span>
         <span class="nav-badge" style="background:linear-gradient(135deg,#22C55E,#0EA5E9);color:#fff;">جديد</span>
+      </div>
+
+      <span class="nav-section-label">وحدات متقدمة</span>
+
+      <div class="nav-item" data-page="programming">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+          <line x1="14" y1="4" x2="10" y2="20"/>
+        </svg>
+        <span class="nav-label">البرمجة المتقدمة</span>
+        <span class="nav-badge" style="background:linear-gradient(135deg,#8B5CF6,#6366F1);color:#fff;">PRO</span>
+      </div>
+
+      <div class="nav-item" data-page="accounting">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="18" rx="2"/>
+          <line x1="2" y1="9" x2="22" y2="9"/>
+          <line x1="10" y1="9" x2="10" y2="21"/>
+          <path d="M6 14h1m3 0h1m3 0h1m3 0h1"/>
+          <path d="M6 17h1m3 0h1m3 0h1m3 0h1"/>
+        </svg>
+        <span class="nav-label">المحاسبة والكاشير</span>
+        <span class="nav-badge" style="background:linear-gradient(135deg,#EAB308,#22C55E);color:#fff;">جديد</span>
+      </div>
+
+      <div class="nav-item" data-page="salesplus">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M20 8v6m3-3h-6"/>
+        </svg>
+        <span class="nav-label">المبيعات الميدانية+</span>
+        <span class="nav-badge" style="background:linear-gradient(135deg,#F97316,#EC4899);color:#fff;">EQ</span>
       </div>
 
       <span class="nav-section-label">الإدارة</span>
@@ -7784,6 +8366,633 @@
       </div>
 
     </section><!-- /page-customercare -->
+    <!-- ===========================
+         PAGE 10 — PROGRAMMING (The Logic Layer)
+    =========================== -->
+    <section class="page" id="page-programming">
+      <div class="page-header">
+        <h1>البرمجة المتقدمة — The Logic Layer 💻</h1>
+        <p>تحديات معمارية وكود نظيف مربوطة بعلم نفس حالة التدفق (Flow State) — مشاكل سوق العمل الحقيقية</p>
+      </div>
+
+      <!-- Module Banner -->
+      <div class="v12-module-banner">
+        <div class="v12-module-banner-icon">🧬</div>
+        <div class="v12-module-banner-text">
+          <h2>Flow State Psychology × Architecture</h2>
+          <p>حالة التدفق (Csikszentmihalyi, 1990) تحدث حين يتوازن مستوى التحدي مع مستوى المهارة. التحديات التالية مُصمّمة لتوصلك لهذه الحالة — لا سهلة لدرجة الملل ولا صعبة لدرجة القلق.</p>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="acc-dashboard-grid" style="margin-bottom:24px;">
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#8B5CF6;">6</div>
+          <div class="acc-stat-label">تحديات معمارية</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:var(--accent);">SOLID</div>
+          <div class="acc-stat-label">مبادئ التصميم</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#EAB308;">DRY</div>
+          <div class="acc-stat-label">الكود النظيف</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#22C55E;">Flow</div>
+          <div class="acc-stat-label">حالة التدفق النفسي</div>
+        </div>
+      </div>
+
+      <!-- Challenge Grid -->
+      <div style="margin-bottom:14px;">
+        <div style="font-size:18px; font-weight:800; color:var(--text); margin-bottom:4px;">تحديات Architecture — مشاكل سوق العمل</div>
+        <div style="font-size:12.5px; color:var(--text-muted);">كل تحدٍّ مُستخلص من مشاكل حقيقية واجهتها فرق برمجية في الميدان</div>
+      </div>
+
+      <div class="prog-challenge-grid">
+
+        <!-- Challenge 1: Scalability -->
+        <div class="prog-challenge-card scale">
+          <div class="prog-card-header">
+            <div class="prog-card-icon" style="background:rgba(249,115,22,0.1);">🏗️</div>
+            <div>
+              <div class="prog-card-title">Scalability Crisis — انهيار تحت الحمل</div>
+              <div class="prog-card-subtitle">مستوى: متقدم | وقت: 45 دقيقة</div>
+            </div>
+          </div>
+          <div class="prog-card-body">نظام e-commerce يخدم 10,000 مستخدم. فجأة ارتفع الطلب لـ 500,000 في حملة تخفيضات. الـ API يُرجع 503. قاعدة البيانات تحت ضغط 98% CPU. كيف تُعيد هيكلة النظام دون إيقافه؟</div>
+          <div class="prog-psych-tag">🧠 Flow Trigger: تحدي يتجاوز المهارة بـ 4%</div>
+          <div class="prog-principle-box">
+            <div class="prog-principle-label">المبدأ المعماري</div>
+            <div class="prog-principle-text">Horizontal Scaling + Read Replicas + Queue-based Processing. لا تُكبّر السيرفر — وزّع الحمل. Cache أولاً، DB ثانياً.</div>
+          </div>
+          <div class="prog-flow-meter">
+            <div class="prog-flow-label">Flow Level</div>
+            <div class="prog-flow-bar"><div class="prog-flow-fill" style="width:85%"></div></div>
+          </div>
+          <div class="prog-code-block">
+<span class="cm">// Pattern: Circuit Breaker + Queue</span>
+<span class="kw">class</span> <span class="fn">OrderProcessor</span> {
+  <span class="kw">constructor</span>() {
+    <span class="kw">this</span>.queue = <span class="kw">new</span> <span class="fn">BullQueue</span>(<span class="str">'orders'</span>);
+    <span class="kw">this</span>.breaker = <span class="kw">new</span> <span class="fn">CircuitBreaker</span>({
+      threshold: <span class="num">5</span>,
+      timeout: <span class="num">30000</span>
+    });
+  }
+  <span class="kw">async</span> <span class="fn">process</span>(order) {
+    <span class="kw">return this</span>.breaker.<span class="fn">fire</span>(() =&gt;
+      <span class="kw">this</span>.queue.<span class="fn">add</span>(order, { priority: order.vip ? <span class="num">1</span> : <span class="num">5</span> })
+    );
+  }
+}
+          </div>
+        </div>
+
+        <!-- Challenge 2: Tech Debt -->
+        <div class="prog-challenge-card debt">
+          <div class="prog-card-header">
+            <div class="prog-card-icon" style="background:rgba(239,68,68,0.1);">💀</div>
+            <div>
+              <div class="prog-card-title">Tech Debt Avalanche — الدين التقني المتراكم</div>
+              <div class="prog-card-subtitle">مستوى: متقدم | وقت: 60 دقيقة</div>
+            </div>
+          </div>
+          <div class="prog-card-body">مشروع عمره 3 سنوات. لا اختبارات. God Classes بـ 3000+ سطر. تبعيات دائرية. كل تعديل يكسر 5 أشياء. الإدارة تريد ميزة جديدة خلال أسبوعين. كيف توازن بين سداد الدين التقني وتسليم الميزة؟</div>
+          <div class="prog-psych-tag">🧠 علم نفس تنظيمي: Broken Windows Theory</div>
+          <div class="prog-principle-box">
+            <div class="prog-principle-label">استراتيجية سداد الدين</div>
+            <div class="prog-principle-text">Boy Scout Rule: اترك الكود أنظف مما وجدته. Strangler Fig Pattern: أحط الكود القديم بواجهة جديدة ثم استبدله تدريجياً. لا تُعد الكتابة — طوّق واستبدل.</div>
+          </div>
+          <div class="prog-flow-meter">
+            <div class="prog-flow-label">Flow Level</div>
+            <div class="prog-flow-bar"><div class="prog-flow-fill" style="width:92%"></div></div>
+          </div>
+          <div class="prog-code-block">
+<span class="cm">// Strangler Fig Pattern</span>
+<span class="kw">class</span> <span class="fn">LegacyUserService</span> { <span class="cm">/* 3000 lines of chaos */</span> }
+
+<span class="cm">// Step 1: Wrap with new interface</span>
+<span class="kw">class</span> <span class="fn">UserServiceFacade</span> {
+  <span class="kw">constructor</span>(legacy, modern) {
+    <span class="kw">this</span>.legacy = legacy;
+    <span class="kw">this</span>.modern = modern;
+  }
+  <span class="kw">async</span> <span class="fn">getUser</span>(id) {
+    <span class="kw">if</span> (<span class="kw">this</span>.modern.<span class="fn">supports</span>(<span class="str">'getUser'</span>))
+      <span class="kw">return this</span>.modern.<span class="fn">getUser</span>(id);
+    <span class="kw">return this</span>.legacy.<span class="fn">getUser</span>(id);
+  }
+}
+          </div>
+        </div>
+
+        <!-- Challenge 3: Clean Architecture -->
+        <div class="prog-challenge-card arch">
+          <div class="prog-card-header">
+            <div class="prog-card-icon" style="background:rgba(139,92,246,0.1);">🎯</div>
+            <div>
+              <div class="prog-card-title">Clean Architecture — فصل المسؤوليات</div>
+              <div class="prog-card-subtitle">مستوى: متوسط-متقدم | وقت: 30 دقيقة</div>
+            </div>
+          </div>
+          <div class="prog-card-body">تطبيق يخلط بين Business Logic و Database Queries و HTTP Handlers في نفس الملف. المطلوب: إعادة هيكلة بحيث يمكن تغيير قاعدة البيانات من PostgreSQL لـ MongoDB دون تغيير سطر واحد في Business Logic.</div>
+          <div class="prog-psych-tag">🧠 Cognitive Load Theory: كل طبقة مسؤولية واحدة</div>
+          <div class="prog-principle-box">
+            <div class="prog-principle-label">مبدأ Dependency Inversion</div>
+            <div class="prog-principle-text">الطبقات العليا لا تعتمد على التفاصيل — بل على التجريدات. الـ Domain Layer لا يعرف أنه يستخدم PostgreSQL. يعرف فقط أنه يتحدث مع Repository Interface.</div>
+          </div>
+          <div class="prog-flow-meter">
+            <div class="prog-flow-label">Flow Level</div>
+            <div class="prog-flow-bar"><div class="prog-flow-fill" style="width:70%"></div></div>
+          </div>
+        </div>
+
+        <!-- Challenge 4: Performance -->
+        <div class="prog-challenge-card clean">
+          <div class="prog-card-header">
+            <div class="prog-card-icon" style="background:rgba(102,252,241,0.1);">⚡</div>
+            <div>
+              <div class="prog-card-title">N+1 Query Hell — أداء القاعدة المنهار</div>
+              <div class="prog-card-subtitle">مستوى: متوسط | وقت: 25 دقيقة</div>
+            </div>
+          </div>
+          <div class="prog-card-body">صفحة تعرض 50 منتجاً مع تقييماتها. كل منتج يُنفّذ query مستقل لجلب التقييمات. النتيجة: 51 query بدل 2. وقت التحميل: 4.2 ثانية. المطلوب: خفضه لأقل من 200ms.</div>
+          <div class="prog-psych-tag">🧠 Instant Feedback Loop = Flow Entry</div>
+          <div class="prog-principle-box">
+            <div class="prog-principle-label">الحل: Eager Loading + DataLoader</div>
+            <div class="prog-principle-text">Batch queries. استخدم JOIN أو DataLoader pattern لجمع كل الـ IDs ثم query واحد. Redis Cache للبيانات المتكررة. Index على الأعمدة المُفلترة.</div>
+          </div>
+          <div class="prog-flow-meter">
+            <div class="prog-flow-label">Flow Level</div>
+            <div class="prog-flow-bar"><div class="prog-flow-fill" style="width:60%"></div></div>
+          </div>
+        </div>
+
+      </div><!-- /prog-challenge-grid -->
+
+      <!-- Psychology of Programming Section -->
+      <div class="card" style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">
+          <div style="width:46px;height:46px;border-radius:var(--radius-md);background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;">🧠</div>
+          <div>
+            <div style="font-size:17px;font-weight:800;color:var(--text);">علم النفس المعرفي × البرمجة</div>
+            <div style="font-size:12px;color:var(--text-muted);">كيف يعمل دماغ المبرمج — وكيف تستغل ذلك لأداء أعلى</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:20px;margin-bottom:10px;">🌊</div>
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:8px;">Flow State Entry</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">شروط الدخول: هدف واضح + تغذية راجعة فورية + تحدي يتجاوز المهارة بـ 4-8%. أغلق كل المشتتات. 25 دقيقة بلا انقطاع = بوابة الدخول.</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:20px;margin-bottom:10px;">🔋</div>
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:8px;">Cognitive Battery</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">قدرة اتخاذ القرار محدودة يومياً (Baumeister, 1998). اكتب الكود المعماري صباحاً. اترك Bug Fixes والـ Refactoring لوقت انخفاض الطاقة.</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:20px;margin-bottom:10px;">🪤</div>
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:8px;">Sunk Cost Trap</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">«استثمرت 3 أيام في هذا الحل — لا أستطيع التراجع». مغالطة التكلفة الغارقة أخطر عدو للمبرمج. قرار إعادة الكتابة يجب أن يُبنى على المستقبل لا الماضي.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOLID Principles Quick Reference -->
+      <div class="card">
+        <div style="font-size:16px;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);">📐 مبادئ SOLID — المرجع السريع</div>
+        <table class="data-table">
+          <thead><tr><th>الحرف</th><th>المبدأ</th><th>التطبيق الواقعي</th><th>الانتهاك الشائع</th></tr></thead>
+          <tbody>
+            <tr>
+              <td style="color:#8B5CF6;font-weight:900;font-size:18px;">S</td>
+              <td style="color:var(--text);font-weight:600;">Single Responsibility</td>
+              <td style="font-size:12px;">كل class مسؤول عن شيء واحد فقط. UserService لا يُرسل إيميلات.</td>
+              <td><span class="tag red" style="font-size:10px;">God Class</span></td>
+            </tr>
+            <tr>
+              <td style="color:#0EA5E9;font-weight:900;font-size:18px;">O</td>
+              <td style="color:var(--text);font-weight:600;">Open/Closed</td>
+              <td style="font-size:12px;">مفتوح للتوسعة، مغلق للتعديل. أضف سلوكاً جديداً بـ Plugin لا بتعديل الأصل.</td>
+              <td><span class="tag red" style="font-size:10px;">If/Else Chain</span></td>
+            </tr>
+            <tr>
+              <td style="color:#22C55E;font-weight:900;font-size:18px;">L</td>
+              <td style="color:var(--text);font-weight:600;">Liskov Substitution</td>
+              <td style="font-size:12px;">أي subclass يجب أن يعمل مكان parent دون كسر السلوك.</td>
+              <td><span class="tag red" style="font-size:10px;">Override بسلوك مختلف</span></td>
+            </tr>
+            <tr>
+              <td style="color:#EAB308;font-weight:900;font-size:18px;">I</td>
+              <td style="color:var(--text);font-weight:600;">Interface Segregation</td>
+              <td style="font-size:12px;">واجهات صغيرة مُتخصصة أفضل من واجهة عملاقة واحدة.</td>
+              <td><span class="tag red" style="font-size:10px;">Fat Interface</span></td>
+            </tr>
+            <tr>
+              <td style="color:#EC4899;font-weight:900;font-size:18px;">D</td>
+              <td style="color:var(--text);font-weight:600;">Dependency Inversion</td>
+              <td style="font-size:12px;">اعتمد على Abstractions لا Concretions. Inject dependencies.</td>
+              <td><span class="tag red" style="font-size:10px;">new في كل مكان</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section><!-- /page-programming -->
+    <!-- ===========================
+         PAGE 11 — ACCOUNTING & CASHIER (The Precision Layer)
+    =========================== -->
+    <section class="page" id="page-accounting">
+      <div class="page-header">
+        <h1>المحاسبة والكاشير — The Precision Layer 🧮</h1>
+        <p>علم النفس المالي (Behavioral Finance) × الدقة المتناهية — تدريب على التعامل مع ضغط الأرقام</p>
+      </div>
+
+      <!-- Module Banner -->
+      <div class="v12-module-banner">
+        <div class="v12-module-banner-icon">💰</div>
+        <div class="v12-module-banner-text">
+          <h2>Behavioral Finance × Precision Under Pressure</h2>
+          <p>دانييل كانيمان أثبت أن 90% من الأخطاء المالية ليست نقص معرفة — بل تحيّزات معرفية تحت الضغط. هذا القسم يُدرّبك على الدقة حين يكون الضغط في أعلاه.</p>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="acc-dashboard-grid">
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#22C55E;">99.7%</div>
+          <div class="acc-stat-label">الدقة المطلوبة في الكاشير</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#EF4444;">72%</div>
+          <div class="acc-stat-label">من الأخطاء بسبب الضغط</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#EAB308;">5</div>
+          <div class="acc-stat-label">تحيّزات مالية شائعة</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:var(--accent);">LIFO</div>
+          <div class="acc-stat-label">vs FIFO — أيهما تختار؟</div>
+        </div>
+      </div>
+
+      <!-- Scenario Grid -->
+      <div style="margin-bottom:14px;">
+        <div style="font-size:18px; font-weight:800; color:var(--text); margin-bottom:4px;">سيناريوهات الضغط المالي</div>
+        <div style="font-size:12.5px; color:var(--text-muted);">مواقف حقيقية من الكاشير والمحاسبة — كل موقف مربوط بالتحيّز النفسي الذي يسببه</div>
+      </div>
+
+      <div class="acc-scenario-grid">
+
+        <!-- Scenario 1: Pressure Counting -->
+        <div class="acc-scenario-card pressure">
+          <div class="acc-scenario-header">
+            <div class="acc-scenario-icon" style="background:rgba(239,68,68,0.1);">⏱️</div>
+            <div class="acc-scenario-title">العدّ تحت ضغط الطابور</div>
+          </div>
+          <div class="acc-scenario-desc">طابور 15 شخصاً. آخر المناوبة. عميل يدفع بمبلغ كبير نقداً (478.50 ريال). الضغط يُسرّع العدّ ويُقلل الدقة. كيف تحافظ على الـ 99.7% تحت هذا الضغط؟</div>
+          <div class="acc-psych-insight"><strong>التحيّز:</strong> Speed-Accuracy Tradeoff (Fitts, 1954) — الدماغ يُضحي بالدقة لصالح السرعة تحت الضغط الاجتماعي. الحل: Double-Count Protocol — عدّ مرتين بصوت منخفض.</div>
+          <div class="acc-pressure-gauge">
+            <div class="acc-pressure-emoji">🔴</div>
+            <div class="acc-pressure-bar"><div class="acc-pressure-fill acc-pressure-high" style="width:90%"></div></div>
+            <span style="font-size:11px;font-weight:700;color:#EF4444;">ضغط عالٍ جداً</span>
+          </div>
+        </div>
+
+        <!-- Scenario 2: Fraud Detection -->
+        <div class="acc-scenario-card fraud">
+          <div class="acc-scenario-header">
+            <div class="acc-scenario-icon" style="background:rgba(234,179,8,0.1);">🕵️</div>
+            <div class="acc-scenario-title">اكتشاف التزوير في الفواتير</div>
+          </div>
+          <div class="acc-scenario-desc">وصلك طلب صرف بمبلغ 12,000 ريال. الفاتورة تبدو طبيعية — لكن المورّد جديد والمبلغ أعلى من المعتاد بـ 40%. ما العلامات الحمراء التي يجب أن تُنبّهك؟</div>
+          <div class="acc-psych-insight"><strong>التحيّز:</strong> Authority Bias — الموظف يُمرّر الفواتير المعتمدة من المدير دون تدقيق. Benford's Law: الأرقام الطبيعية تبدأ بـ 1 بنسبة 30%. إذا كانت فواتير المورّد تبدأ بـ 9 كثيراً — هناك مشكلة.</div>
+          <div class="acc-pressure-gauge">
+            <div class="acc-pressure-emoji">🟡</div>
+            <div class="acc-pressure-bar"><div class="acc-pressure-fill acc-pressure-med" style="width:65%"></div></div>
+            <span style="font-size:11px;font-weight:700;color:#EAB308;">ضغط متوسط</span>
+          </div>
+        </div>
+
+        <!-- Scenario 3: Reconciliation -->
+        <div class="acc-scenario-card reconcile">
+          <div class="acc-scenario-header">
+            <div class="acc-scenario-icon" style="background:rgba(139,92,246,0.1);">🔍</div>
+            <div class="acc-scenario-title">فرق 0.05 ريال في المطابقة</div>
+          </div>
+          <div class="acc-scenario-desc">جرد نهاية اليوم: الصندوق فيه 47,892.45 والنظام يقول 47,892.50. الفرق 0.05 ريال فقط. هل تتجاهله أم تبحث عن السبب؟ متى يكون الفرق الصغير علامة خطر كبير؟</div>
+          <div class="acc-psych-insight"><strong>التحيّز:</strong> Normalization of Deviance (Vaughan, 1996) — التعوّد على الانحرافات الصغيرة حتى تصبح «طبيعية». اليوم 0.05 — بعد شهر 50 — بعد سنة 5000. ابحث دائماً عن السبب.</div>
+          <div class="acc-pressure-gauge">
+            <div class="acc-pressure-emoji">🟢</div>
+            <div class="acc-pressure-bar"><div class="acc-pressure-fill acc-pressure-low" style="width:35%"></div></div>
+            <span style="font-size:11px;font-weight:700;color:#22C55E;">ضغط منخفض</span>
+          </div>
+        </div>
+
+        <!-- Scenario 4: Multi-Currency -->
+        <div class="acc-scenario-card precision">
+          <div class="acc-scenario-header">
+            <div class="acc-scenario-icon" style="background:rgba(34,197,94,0.1);">💱</div>
+            <div class="acc-scenario-title">خطأ تحويل العملات — الفرق القاتل</div>
+          </div>
+          <div class="acc-scenario-desc">عميل يدفع بالدولار. سعر الصرف 3.75 لكن البنك يستخدم 3.7489. على مبلغ 50,000$ الفرق = 55 ريال. على مليون دولار = 1,100 ريال. متى يكون «التقريب» مقبولاً ومتى يكون خطيراً؟</div>
+          <div class="acc-psych-insight"><strong>التحيّز:</strong> Anchoring Effect — العقل يتمسك بالرقم الأول (3.75) ويتجاهل الكسور. في المبالغ الكبيرة، الكسور العشرية تُصبح آلافاً. القاعدة: استخدم 4 خانات عشرية دائماً في التحويل.</div>
+          <div class="acc-pressure-gauge">
+            <div class="acc-pressure-emoji">🟡</div>
+            <div class="acc-pressure-bar"><div class="acc-pressure-fill acc-pressure-med" style="width:55%"></div></div>
+            <span style="font-size:11px;font-weight:700;color:#EAB308;">دقة حرجة</span>
+          </div>
+        </div>
+
+      </div><!-- /acc-scenario-grid -->
+
+      <!-- Behavioral Finance Psychology -->
+      <div class="card" style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">
+          <div style="width:46px;height:46px;border-radius:var(--radius-md);background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;">🧠</div>
+          <div>
+            <div style="font-size:17px;font-weight:800;color:var(--text);">التحيّزات المالية الخمسة — Behavioral Finance</div>
+            <div style="font-size:12px;color:var(--text-muted);">الأخطاء التي يرتكبها حتى المحاسبون الخبراء تحت الضغط</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+          <div style="background:var(--surface-2);border:1px solid rgba(239,68,68,0.15);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:#EF4444;margin-bottom:8px;">1. Anchoring — التثبيت</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">الرقم الأول الذي تراه يُثبّت تقديراتك اللاحقة. إذا رأيت فاتورة بـ 10,000 أولاً — ستبدو 8,000 «رخيصة» حتى لو كانت مبالغة.</div>
+            <div style="font-size:10.5px;color:var(--accent);margin-top:8px;font-weight:700;">الحل: قيّم كل رقم مستقلاً عن سياقه.</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid rgba(234,179,8,0.15);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:#EAB308;margin-bottom:8px;">2. Round Number Bias — تحيّز الأرقام المستديرة</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">الدماغ يُفضّل 1000 على 987. في المحاسبة «التقريب» لأعلى أو أسفل يتراكم. 13 ريال يومياً = 4,745 ريال سنوياً.</div>
+            <div style="font-size:10.5px;color:var(--accent);margin-top:8px;font-weight:700;">الحل: لا تُقرّب أبداً — سجّل الرقم الحقيقي.</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid rgba(14,165,233,0.15);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:#0EA5E9;margin-bottom:8px;">3. Confirmation Bias — تحيّز التأكيد</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">حين تعتقد أن الميزانية متوازنة — تبحث عن أرقام تؤكد اعتقادك وتتجاهل التناقضات. هذا يجعل كشف الأخطاء أبطأ بكثير.</div>
+            <div style="font-size:10.5px;color:var(--accent);margin-top:8px;font-weight:700;">الحل: ابحث دائماً عمّا يُعارض نتيجتك.</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid rgba(139,92,246,0.15);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:#8B5CF6;margin-bottom:8px;">4. Fatigue Drift — انحراف التعب</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">معدل الأخطاء يزيد 47% بعد 4 ساعات متواصلة (Danziger, 2011). الدماغ يختصر الطريق — يُقرّب، يتخطى خطوات، يفترض بدل أن يتحقق.</div>
+            <div style="font-size:10.5px;color:var(--accent);margin-top:8px;font-weight:700;">الحل: استراحة 10 دقائق كل 90 دقيقة.</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid rgba(34,197,94,0.15);border-radius:var(--radius-md);padding:18px;grid-column:1/-1;">
+            <div style="font-size:13px;font-weight:800;color:#22C55E;margin-bottom:8px;">5. Loss Aversion — نفور الخسارة في التقارير</div>
+            <div style="font-size:11.5px;color:var(--text-muted);line-height:1.7;">ألم الخسارة ضعف متعة الربح (Kahneman & Tversky). المحاسب يميل لتأخير الإبلاغ عن خسائر أو يُصيغها بطريقة تُخفف وقعها. هذا يؤدي لتراكم المشاكل حتى تنفجر. <strong style="color:var(--text);">القاعدة: الأرقام السيئة أولاً — ثم الحلول.</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily Cashier Checklist -->
+      <div class="card">
+        <div style="font-size:16px;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);">✅ قائمة التحقق اليومية — الكاشير المحترف</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;">
+            <div style="font-size:11px;font-weight:800;color:var(--accent);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">🌅 بداية المناوبة</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">• عدّ الصندوق الافتتاحي مرتين<br>• تأكد من توفر الفكة<br>• راجع عروض اليوم وأسعارها<br>• تحقق من اتصال POS بالنظام</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;">
+            <div style="font-size:11px;font-weight:800;color:#EAB308;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">🌙 نهاية المناوبة</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">• عدّ الصندوق + مطابقة مع التقرير<br>• توثيق أي فرق مهما كان صغيراً<br>• مراجعة المرتجعات والإلغاءات<br>• تسجيل ملاحظات لمناوبة الغد</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;">
+            <div style="font-size:11px;font-weight:800;color:#EF4444;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">🚨 علامات الخطر</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">• فرق متكرر بنفس المبلغ يومياً<br>• إلغاءات متكررة من نفس الموظف<br>• مرتجعات بدون إيصال أصلي<br>• فواتير تنتهي بـ .00 دائماً</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;">
+            <div style="font-size:11px;font-weight:800;color:#22C55E;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">💪 عادات الدقة</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">• عدّ النقود أمام العميل دائماً<br>• أعد العدّ إذا تمّت مقاطعتك<br>• لا تعتمد على الذاكرة — سجّل<br>• استراحة بعد 90 دقيقة متواصلة</div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /page-accounting -->
+    <!-- ===========================
+         PAGE 12 — SALES PLUS (The Persuasion Layer)
+    =========================== -->
+    <section class="page" id="page-salesplus">
+      <div class="page-header">
+        <h1>المبيعات الميدانية+ — The Persuasion Layer 🎯</h1>
+        <p>لغة الجسد × علم نفس الإقناع × الذكاء العاطفي — من Cialdini إلى الميدان العربي</p>
+      </div>
+
+      <!-- Module Banner -->
+      <div class="v12-module-banner">
+        <div class="v12-module-banner-icon">🎭</div>
+        <div class="v12-module-banner-text">
+          <h2>Body Language × Cialdini × Emotional Intelligence</h2>
+          <p>93% من التواصل غير لفظي (Mehrabian). في المبيعات الميدانية، جسدك يبيع قبل لسانك. هذا القسم يدمج لغة الجسد مع مبادئ الإقناع الست والذكاء العاطفي الميداني.</p>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="acc-dashboard-grid" style="margin-bottom:26px;">
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#EC4899;">93%</div>
+          <div class="acc-stat-label">تواصل غير لفظي</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#F97316;">6</div>
+          <div class="acc-stat-label">أسلحة Cialdini</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:#8B5CF6;">12</div>
+          <div class="acc-stat-label">إشارة جسدية حاسمة</div>
+        </div>
+        <div class="acc-stat-card">
+          <div class="acc-stat-num" style="color:var(--accent);">EQ</div>
+          <div class="acc-stat-label">الذكاء العاطفي الميداني</div>
+        </div>
+      </div>
+
+      <!-- SECTION: Body Language -->
+      <div style="margin-bottom:14px;">
+        <div style="font-size:18px; font-weight:800; color:var(--text); margin-bottom:4px;">قراءة لغة الجسد — 12 إشارة تكشف نيّة العميل</div>
+        <div style="font-size:12.5px; color:var(--text-muted);">ما يُخبرك به جسد العميل قبل أن يتكلم — إشارات الشراء وإشارات الرفض</div>
+      </div>
+
+      <div class="body-lang-grid">
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">🤝</div>
+          <div class="body-lang-title">الميل للأمام</div>
+          <div class="body-lang-desc">العميل يميل نحوك بجسده = اهتمام حقيقي. زِد من التفاصيل وقدّم العرض.</div>
+          <div class="body-lang-signal positive">🟢 إشارة شراء</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">🙅</div>
+          <div class="body-lang-title">تقاطع الذراعين</div>
+          <div class="body-lang-desc">حاجز دفاعي. لا تضغط — اسأل سؤالاً مفتوحاً لكسر الحاجز.</div>
+          <div class="body-lang-signal negative">🔴 إشارة مقاومة</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">👀</div>
+          <div class="body-lang-title">توسّع البؤبؤ</div>
+          <div class="body-lang-desc">العيون تتوسع عند الإعجاب. إذا لاحظت ذلك عند عرض المنتج — أنت على المسار الصحيح.</div>
+          <div class="body-lang-signal positive">🟢 إشارة إعجاب</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">🦶</div>
+          <div class="body-lang-title">اتجاه القدمين</div>
+          <div class="body-lang-desc">القدم تشير لاتجاه الرغبة. إذا أقدام العميل تشير للباب — يريد المغادرة. أسرع بالإغلاق أو غيّر المسار.</div>
+          <div class="body-lang-signal negative">🔴 إشارة انسحاب</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">✋</div>
+          <div class="body-lang-title">لمس المنتج</div>
+          <div class="body-lang-desc">حين يلمس العميل المنتج = بدأ يمتلكه نفسياً. Endowment Effect. دعه يُمسك ويُجرّب.</div>
+          <div class="body-lang-signal positive">🟢 إشارة تملّك</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">🤔</div>
+          <div class="body-lang-title">لمس الذقن</div>
+          <div class="body-lang-desc">يُقيّم ويُفكّر. لا تقاطعه! أصمت 5 ثوانٍ. الصمت هنا يبيع أكثر من أي كلام.</div>
+          <div class="body-lang-signal neutral">🟡 إشارة تقييم</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">😊</div>
+          <div class="body-lang-title">الابتسامة الحقيقية (Duchenne)</div>
+          <div class="body-lang-desc">تشمل العينين. الابتسامة المجاملة تشمل الفم فقط. تعلّم الفرق — الأولى تعني قبول حقيقي.</div>
+          <div class="body-lang-signal positive">🟢 إشارة قبول</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">⌚</div>
+          <div class="body-lang-title">النظر للساعة</div>
+          <div class="body-lang-desc">فقدت اهتمامه. غيّر الموضوع فوراً أو اختصر لنقطة القيمة الأهم.</div>
+          <div class="body-lang-signal negative">🔴 إشارة ملل</div>
+        </div>
+        <div class="body-lang-card">
+          <div class="body-lang-emoji">📱</div>
+          <div class="body-lang-title">وضع الهاتف مقلوباً</div>
+          <div class="body-lang-desc">قرر أن يمنحك اهتمامه الكامل. فرصتك الذهبية — قدّم أقوى نقطة الآن.</div>
+          <div class="body-lang-signal positive">🟢 إشارة التزام</div>
+        </div>
+      </div>
+
+      <!-- SECTION: Cialdini's 6 Principles Applied -->
+      <div style="margin-bottom:14px;">
+        <div style="font-size:18px; font-weight:800; color:var(--text); margin-bottom:4px;">أسلحة الإقناع الست — التطبيق الميداني العربي</div>
+        <div style="font-size:12.5px; color:var(--text-muted);">Robert Cialdini (1984) — كل سلاح مع سكريبت عربي جاهز للاستخدام الفوري</div>
+      </div>
+
+      <div class="persuasion-principle-grid">
+        <div class="persuasion-card p1">
+          <div class="persuasion-num">01</div>
+          <div class="persuasion-name">Reciprocity — المعاملة بالمثل</div>
+          <div class="persuasion-arabic">أعطِ قبل أن تطلب</div>
+          <div class="persuasion-example">«قبل ما نتكلم عن أي شيء — حضّرت لك تحليلاً سريعاً مجانياً لوضعك الحالي. خذ نظرة عليه.»<br><br><strong style="color:var(--accent);">لماذا يعمل:</strong> الدماغ مبرمج على ردّ الجميل. العطاء غير المشروط يُنشئ دَيْناً نفسياً.</div>
+        </div>
+        <div class="persuasion-card p2">
+          <div class="persuasion-num">02</div>
+          <div class="persuasion-name">Scarcity — الندرة</div>
+          <div class="persuasion-arabic">ما يُخشى فقدانه يُرغب فيه أكثر</div>
+          <div class="persuasion-example">«هذا العرض متاح لـ 48 ساعة فقط — لأن التكلفة ستتغير مع المورّد. بصراحة، ما أقدر أضمنه بعد الخميس.»<br><br><strong style="color:var(--accent);">لماذا يعمل:</strong> Loss Aversion — ألم الخسارة ضعف متعة الربح.</div>
+        </div>
+        <div class="persuasion-card p3">
+          <div class="persuasion-num">03</div>
+          <div class="persuasion-name">Authority — السلطة والخبرة</div>
+          <div class="persuasion-arabic">الناس يثقون بالخبير قبل المنتج</div>
+          <div class="persuasion-example">«خلال 8 سنوات عملنا مع 200+ شركة في نفس قطاعك. أكثر مشكلة شفناها هي [X] — وهذا بالضبط اللي نحلّه.»<br><br><strong style="color:var(--accent);">لماذا يعمل:</strong> الأرقام + الخبرة المُوثّقة تُقلّل مقاومة الشك.</div>
+        </div>
+        <div class="persuasion-card p4">
+          <div class="persuasion-num">04</div>
+          <div class="persuasion-name">Social Proof — الإثبات الاجتماعي</div>
+          <div class="persuasion-arabic">الناس يتبعون الناس</div>
+          <div class="persuasion-example">«80% من العملاء في قطاع [X] اختاروا هذه الباقة تحديداً. آخر 3 شركات وقّعت الشهر الماضي هم [أ، ب، ج].»<br><br><strong style="color:var(--accent);">لماذا يعمل:</strong> Bandwagon Effect — لا أحد يريد أن يكون الوحيد خارج القطيع.</div>
+        </div>
+        <div class="persuasion-card p5">
+          <div class="persuasion-num">05</div>
+          <div class="persuasion-name">Liking — الإعجاب والتشابه</div>
+          <div class="persuasion-arabic">نشتري ممن نُحبّهم</div>
+          <div class="persuasion-example">«لاحظت إنكم من [المنطقة] — أنا عشت هناك 3 سنوات! وأشوف إنكم تركّزون على الجودة زيّ ما كنا نسويه.»<br><br><strong style="color:var(--accent);">لماذا يعمل:</strong> Similarity Bias — نثق بمن يشبهنا. ابحث عن قاسم مشترك حقيقي.</div>
+        </div>
+        <div class="persuasion-card p6">
+          <div class="persuasion-num">06</div>
+          <div class="persuasion-name">Commitment — الالتزام والاتساق</div>
+          <div class="persuasion-arabic">من يقول نعم لصغيرة يقول نعم لكبيرة</div>
+          <div class="persuasion-example">«هل توافق معي إن [المشكلة X] تحتاج حل؟» → «وهل الحل المثالي يكون [وصف]؟» → «إذاً خلينا نبدأ.»<br><br><strong style="color:var(--accent);">لماذا يعمل:</strong> Yes Ladder — سلسلة موافقات صغيرة تبني زخماً نفسياً نحو القرار الكبير.</div>
+        </div>
+      </div>
+
+      <!-- SECTION: Emotional Intelligence in Field -->
+      <div class="card" style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">
+          <div style="width:46px;height:46px;border-radius:var(--radius-md);background:rgba(236,72,153,0.12);border:1px solid rgba(236,72,153,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;">❤️</div>
+          <div>
+            <div style="font-size:17px;font-weight:800;color:var(--text);">الذكاء العاطفي الميداني — EQ في البيع</div>
+            <div style="font-size:12px;color:var(--text-muted);">كيف تقرأ مشاعر العميل وتُديرها لصالح الصفقة دون تلاعب</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:10px;">🎭 قراءة الحالة العاطفية</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">
+              <strong style="color:#22C55E;">متحمّس:</strong> أسرع — لا تُطل الشرح. قدّم الإغلاق.<br>
+              <strong style="color:#EAB308;">متردد:</strong> لا تضغط. اسأل «ما الذي يمنعك؟»<br>
+              <strong style="color:#EF4444;">غاضب/محبط:</strong> استمع أولاً. لا تبع الآن.<br>
+              <strong style="color:#0EA5E9;">محايد/بارد:</strong> أنت لم تُثر اهتمامه بعد. غيّر الزاوية.
+            </div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:10px;">🪞 التطابق العاطفي (Emotional Mirroring)</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">
+              <strong>القاعدة:</strong> طابق مستوى الطاقة ثم قُد.<br><br>
+              • عميل هادئ → ابدأ هادئاً ثم ارفع تدريجياً<br>
+              • عميل متحمس → طابق حماسه ثم وجّهه<br>
+              • عميل رسمي → كن رسمياً أولاً ثم أضف دفئاً<br><br>
+              <span style="color:var(--accent);font-weight:700;">⚠️ لا تتطابق مع الغضب أبداً.</span>
+            </div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:10px;">🧲 Psychological Triggers في البيع الميداني</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">
+              <strong>1. Pain-Agitate-Solve:</strong> حدد الألم → كبّره → قدّم الحل<br>
+              <strong>2. Future Pacing:</strong> «تخيّل بعد 6 أشهر وهذي المشكلة انحلّت...»<br>
+              <strong>3. Contrast Principle:</strong> اعرض الخيار الأغلى أولاً<br>
+              <strong>4. Storytelling:</strong> «عميل مثلك بالضبط كان يعاني من...»
+            </div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:10px;">⚡ إغلاق الصفقة — 5 تقنيات نفسية</div>
+            <div style="font-size:12px;color:var(--text-muted);line-height:1.8;">
+              <strong>1. Assumptive Close:</strong> «نبدأ الأحد أو الثلاثاء؟»<br>
+              <strong>2. Summary Close:</strong> لخّص كل القيمة ثم اصمت<br>
+              <strong>3. Urgency Close:</strong> «العرض ينتهي غداً»<br>
+              <strong>4. Puppy Dog Close:</strong> «جرّبه أسبوع — إذا ما عجبك رجّعه»<br>
+              <strong>5. Ben Franklin Close:</strong> «خلنا نكتب الإيجابيات والسلبيات معاً»
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Field Sales Psychology -->
+      <div class="card">
+        <div style="font-size:16px;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);">🧠 علم النفس التنظيمي — إدارة الذات في الميدان</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+          <div style="background:var(--surface-2);border:1px solid rgba(239,68,68,0.15);border-radius:var(--radius-md);padding:16px;text-align:center;">
+            <div style="font-size:28px;margin-bottom:8px;">😤</div>
+            <div style="font-size:12px;font-weight:800;color:var(--text);margin-bottom:6px;">بعد 5 رفضات متتالية</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.6;">توقف 10 دقائق. Rejection Desensitization: الرفض ليس شخصياً. راجع: هل المشكلة في العرض أم في التأهيل؟</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid rgba(34,197,94,0.15);border-radius:var(--radius-md);padding:16px;text-align:center;">
+            <div style="font-size:28px;margin-bottom:8px;">🏆</div>
+            <div style="font-size:12px;font-weight:800;color:var(--text);margin-bottom:6px;">بعد صفقة ناجحة</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.6;">Winner's Effect: التستوستيرون يرتفع بعد النجاح. استغل هذه الحالة — اتصل بالعميل التالي فوراً!</div>
+          </div>
+          <div style="background:var(--surface-2);border:1px solid rgba(139,92,246,0.15);border-radius:var(--radius-md);padding:16px;text-align:center;">
+            <div style="font-size:28px;margin-bottom:8px;">🧘</div>
+            <div style="font-size:12px;font-weight:800;color:var(--text);margin-bottom:6px;">قبل اجتماع كبير</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.6;">Power Posing (Cuddy, 2012): قف بوضعية قوة لمدة دقيقتين. يرفع التستوستيرون ويخفض الكورتيزول.</div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /page-salesplus -->
 
   <!-- ✅ FOOTER — after ALL pages so flex order is correct -->
   <footer id="smart-footer">
@@ -7806,7 +9015,7 @@
       <span><span class="footer-kbd">Ctrl</span> + <span class="footer-kbd">/</span> بحث</span>
     </div>
     <div class="footer-section">
-      <span id="footer-version" style="color:var(--text-faint);">v11.0</span>
+      <span id="footer-version" style="color:var(--text-faint);">v12.0</span>
       <span class="footer-sep">·</span>
       <span>منصة التدريب الاحترافية</span>
       <span class="footer-sep">·</span>
@@ -7895,6 +9104,33 @@
         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
           <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>`
+      },
+      programming: {
+        title: 'البرمجة المتقدمة — The Logic Layer',
+        breadcrumb: 'الرئيسية / وحدات متقدمة / البرمجة',
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+          <line x1="14" y1="4" x2="10" y2="20"/>
+        </svg>`
+      },
+      accounting: {
+        title: 'المحاسبة والكاشير — The Precision Layer',
+        breadcrumb: 'الرئيسية / وحدات متقدمة / المحاسبة',
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="18" rx="2"/>
+          <line x1="2" y1="9" x2="22" y2="9"/>
+          <line x1="10" y1="9" x2="10" y2="21"/>
+        </svg>`
+      },
+      salesplus: {
+        title: 'المبيعات الميدانية+ — The Persuasion Layer',
+        breadcrumb: 'الرئيسية / وحدات متقدمة / مبيعات ميدانية+',
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M20 8v6m3-3h-6"/>
         </svg>`
       }
     };
